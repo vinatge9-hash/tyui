@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Appointments - Serene Health Clinic</title>
+  <meta name="description" content="Book an appointment at Serene Health Clinic. We are open with convenient hours and patient-friendly services." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] } } }
+  </script>
+</head>
+<body id="body" class="min-h-screen bg-white text-gray-700 font-sans opacity-0 transition-opacity duration-700">
+  <header class="bg-white sticky top-0 z-50 border-b">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center text-xl font-semibold text-gray-900">Serene Health Clinic</a>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Appointments</a>
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" aria-label="Open menu" aria-expanded="false">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Home</a>
+          <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">About</a>
+          <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Appointments</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="relative min-h-screen bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 flex flex-col lg:flex-row items-start">
+      <div class="w-full lg:w-1/2 reveal opacity-0 translate-y-6">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Book an Appointment</h1>
+        <p class="text-lg text-gray-700 mb-6">Schedule a visit at your convenience. Our team will confirm your appointment details promptly.</p>
+        <button onclick="window.location.href='contact.html'" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all duration-300">Schedule Now</button>
+      </div>
+      <div class="w-full lg:w-1/2 mt-8 lg:mt-0 reveal opacity-0 translate-y-6">
+        <img src="https://pixabay.com/get/ga4e9838e5ca73c8defd37fdbb091e3d8366e4c979c0d1a9d694c669a8381229c7a54f1dd8dc3470afa031e833e50a8c8cd0b8eccc08d7b3c87fdbf10c2bac75a_640.jpg" alt="Clinic reception area" class="w-full rounded-xl shadow-lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Address & Map -->
+  <section class="py-12 bg-white reveal opacity-0 translate-y-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="text-2xl font-semibold text-gray-900 mb-3">Our Location</h2>
+        <p class="text-gray-700">456 Health St, Nadargul, Telangana, India</p>
+        <p class="text-gray-700 mt-1">Phone: +91 12345 67890</p>
+        <p class="text-gray-700 mt-1">Opening Hours: Mon–Sat, 8:00 AM – 6:00 PM</p>
+      </div>
+      <div class="rounded-lg overflow-hidden border border-gray-200 h-72 md:h-96">
+        <iframe title="Serene Health Clinic location" src="https://maps.google.com/maps?q=456%20Health%20St%2C%20Nadargul%2C%20Telangana%2C%20India&output=embed" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen="" aria-label="Map to the clinic"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Appointment Form -->
+  <section class="py-12 bg-gray-50 reveal opacity-0 translate-y-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4">Book an Appointment</h2>
+      <form class="bg-white p-6 rounded-lg shadow-sm" aria-label="Booking form" onsubmit="return false;">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input id="name" name="name" type="text" required class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md" />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input id="phone" name="phone" type="tel" required class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div>
+            <label for="date" class="block text-sm font-medium text-gray-700">Preferred Date</label>
+            <input id="date" name="date" type="date" required class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md" />
+          </div>
+          <div>
+            <label for="reason" class="block text-sm font-medium text-gray-700">Reason for Visit</label>
+            <input id="reason" name="reason" type="text" required class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md" />
+          </div>
+        </div>
+        <div class="mt-4 text-right">
+          <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-100 mt-8">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-lg font-semibold mb-2">Serene Health Clinic</h4>
+        <p class="text-sm text-gray-300">Compassionate care for a healthier you. Your health is our priority.</p>
+      </div>
+      <div>
+        <h5 class="text-sm uppercase tracking-wider mb-2">Quick Links</h5>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="about.html" class="hover:underline">About</a></li>
+          <li><a href="contact.html" class="hover:underline">Appointments</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-sm uppercase tracking-wider mb-2">Newsletter & Health Tips</h5>
+        <form class="flex space-x-2" onsubmit="return false;" aria-label="Newsletter subscription">
+          <input type="email" placeholder="Enter your email" aria-label="Email" class="w-full px-3 py-2 rounded-md bg-white text-gray-800" />
+          <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <hr class="border-gray-700 mx-4" />
+    <p class="text-center text-sm pb-4">© 2025 Serene Health Clinic. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0','translate-y-6');
+          entry.target.classList.add('opacity-100','translate-y-0');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealElements.forEach(el => observer.observe(el));
+
+    window.addEventListener('load', function() {
+      document.getElementById('body').classList.remove('opacity-0');
+      document.getElementById('body').classList.add('opacity-100');
+    });
+  </script>
+</body>
+</html>
